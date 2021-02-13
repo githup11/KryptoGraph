@@ -1,0 +1,49 @@
+[tool.briefcase]
+project_name = "KryptoGraph"
+bundle = "com.example"
+version = "0.0.1"
+url = "https://github.com/githup11/KryptoGraph"
+license = "BSD license"
+author = 'Dominik Fuchs'
+author_email = "ev3dom@gmx.de"
+
+[tool.briefcase.app.kryptograph]
+formal_name = "KryptoGraph"
+description = "An Aplication to view Krypto Graph´s."
+icon = "src/kryptograph/resources/kryptograph"
+sources = ['src/kryptograph']
+requires = []
+
+
+[tool.briefcase.app.kryptograph.macOS]
+requires = [
+    'toga-cocoa>=0.3.0.dev20',
+]
+
+[tool.briefcase.app.kryptograph.linux]
+requires = [
+    'toga-gtk>=0.3.0.dev20',
+]
+system_requires = [
+    'libgirepository1.0-dev',
+    'libcairo2-dev',
+    'libpango1.0-dev',
+    'libwebkitgtk-3.0-0',
+    'gir1.2-webkit-3.0',
+]
+
+[tool.briefcase.app.kryptograph.windows]
+requires = [
+    'toga-winforms>=0.3.0.dev20',
+]
+
+# Mobile deployments
+[tool.briefcase.app.kryptograph.iOS]
+requires = [
+    'toga-iOS>=0.3.0.dev20',
+]
+
+[tool.briefcase.app.kryptograph.android]
+requires = [
+    'toga-android>=0.3.0.dev20',
+]
